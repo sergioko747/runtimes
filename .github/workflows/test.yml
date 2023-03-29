@@ -26,4 +26,4 @@ jobs:
         uses: Swatinem/rust-cache@6fd3edff6979b79f87531400ad694fb7f2c84b1f # v2.2.1
 
       - name: Cargo test
-        run:  cargo test --workspace --features runtime-benchmarks
+        run:  cargo +nightly test --workspace --features runtime-benchmarks
