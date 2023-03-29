@@ -1,10 +1,6 @@
 name: "Clippy"
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -20,7 +16,6 @@ jobs:
         with:
           profile: minimal
           toolchain: stable
-          target: wasm32-unknown-unknown
           components: clippy
           override: true
 
