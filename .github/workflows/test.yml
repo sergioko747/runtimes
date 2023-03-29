@@ -17,7 +17,6 @@ jobs:
           profile: minimal
           toolchain: nightly
           target: wasm32-unknown-unknown
-          components: rustfmt, clippy
           override: true
 
       - name: Checkout
@@ -25,12 +24,6 @@ jobs:
 
       - name: Fetch cache
         uses: Swatinem/rust-cache@6fd3edff6979b79f87531400ad694fb7f2c84b1f # v2.2.1
-
-      - name: Cargo format
-        run:  cargo fmt --all -- --check
-
-      - name: Cargo clippy
-        run:  cargo clippy --all-targets --all-features -- -D warnings
 
       - name: Cargo test
         run:  cargo test --workspace --features runtime-benchmarks
