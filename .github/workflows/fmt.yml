@@ -1,4 +1,4 @@
-name: Rust CI
+name: cargo fmt
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: Rust CI
+name: cargo clippy
 
 on:
   workflow_dispatch:
